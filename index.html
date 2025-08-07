@@ -2,65 +2,163 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="index, follow">
-  <title>Luces, cámara y... opiniones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luces, Cámara y Opiniones</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#f9f9f9; color:#333; }
-    header { background:#1a1a1a; color:#fff; padding:1em; text-align:center; }
-    nav { background:#333; padding:0.5em; }
-    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center;}
-    nav li { position:relative; margin:0 1em; }
-    nav a { color:#fff; text-decoration:none; padding:0.5em; display:block; }
-    nav ul ul { position:absolute; top:100%; left:0; background:#444; display:none; }
-    nav ul li:hover > ul { display:block; }
-    nav ul ul li { width:150px; margin:0; }
-    section { padding:2em; max-width:800px; margin:0 auto; }
-    h1, h2 { color:#222; }
-    footer { text-align:center; padding:1em; background:#eee; margin-top:2em; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #4A4A4A;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background-color: #4A4A4A;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      margin-bottom: 10px;
+    }
+
+    .banner {
+      background-color: #E5E5E5;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #333;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .movie {
+      margin-bottom: 30px;
+    }
+
+    .movie img {
+      width: 200px;
+      height: auto;
+      display: block;
+    }
+
+    .movie-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #4A4A4A;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Bienvenido a luces, cámara y… opiniones</h1>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li>
-      <a href="#peliculas">Películas</a>
+  <header>
+    <div class="logo">Inicio</div>
+    <nav>
       <ul>
-        <li><a href="#comedia">Comedia</a></li>
-        <li><a href="#terror">Terror</a></li>
-        <li><a href="#misterio">Misterio</a></li>
-        <li><a href="#ciencia-ficcion">Ciencia ficción</a></li>
-        <li><a href="#amor">Amor</a></li>
-        <li><a href="#drama">Drama</a></li>
+        <li>
+          <a href="#">Películas</a>
+          <ul>
+            <li><a href="#comedia">Comedia</a></li>
+            <li><a href="#amor">Amor</a></li>
+            <li><a href="#drama">Drama</a></li>
+            <li><a href="#misterio">Misterio</a></li>
+            <li><a href="#terror">Terror</a></li>
+            <li><a href="#cienciaficcion">Ciencia Ficción</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-</nav>
+    </nav>
+  </header>
 
-<section id="inicio">
-  <h2>¿Qué encontrarás aquí?</h2>
-  <p>Aquí encontrarás recomendaciones honestas y sinceras sobre las series y películas más y menos conocidas. Podrás leer las opiniones más honestas.</p>
-  <p>Descubre un gran catálogo de películas ordenadas por su categoría y encuentra la que más te guste con mis opiniones sinceras.</p>
-  <p>Bienvenido a una página donde te recomendamos las mejores películas que no te puedes perder...</p>
-  <p>Sabemos que cada persona tiene gustos únicos...</p>
-  <p>En esta página no solo te damos títulos al azar: cada recomendación viene con una breve reseña...</p>
-  <p>Además, actualizamos nuestras listas constantemente...</p>
-  <p>Así que ya lo sabes: arriba a la derecha te espera todo un universo audiovisual...</p>
-</section>
+  <div class="banner">
+    <h1>Bienvenidos a mi web de películas</h1>
+  </div>
 
-<section id="peliculas">
-  <h2>Películas</h2>
-  <p>Encuentra tu película perfecta para ver esta noche, decide si quieres una noche terrorífica, entrañable o llena de risas.</p>
-</section>
+  <div class="content">
+    <h2 id="comedia">Comedia</h2>
+    <!-- Aquí van las películas de comedia -->
 
-<footer>
-  <p>​ 2025 Luces, cámara y... opiniones</p>
-</footer>
+    <h2 id="amor">Amor</h2>
+    <!-- Aquí van las películas de amor -->
+
+    <h2 id="drama">Drama</h2>
+    <!-- Aquí van las películas de drama -->
+
+    <h2 id="misterio">Misterio</h2>
+    <!-- Aquí van las películas de misterio -->
+
+    <h2 id="terror">Terror</h2>
+    <!-- Aquí van las películas de terror -->
+
+    <h2 id="cienciaficcion">Ciencia Ficción</h2>
+    <!-- Aquí van las películas de ciencia ficción -->
+  </div>
+
+  <footer>
+    &copy; 2025 Luces, Cámara y Opiniones
+  </footer>
 
 </body>
 </html>
